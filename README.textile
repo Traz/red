@@ -1,4 +1,4 @@
-h2. Red : small Rails application for exploring purpose ...
+h2. __Red__ : small Rails application for exploring purpose ...
 
 This is the Git repository of the french tutorial blog "Rubiki":http://rubyki.blogspot.com. Each Github tag corresponding on one or more posts. Warning : i'm learning Rails in same time so ... there surely numerous mistakes :) Drop me a message if you find someone or if you have a better solution for a script.
 
@@ -17,7 +17,7 @@ __**Libraries**__ installed and configured :
 ** Formtastic
 ** Will_paginate
 
-__**Tips** used :
+__**Tips**__ used :
 ** Multiple will_paginate on same page
 ** Auto_complete RESTfull way in nested form, with returning an id rather a string
 ** Ajax add/remove examples 
