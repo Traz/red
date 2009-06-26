@@ -1,0 +1,29 @@
+body {
+  background-color: #700E27;
+  color: white; }
+
+#bloc_login {
+  width: 600px;
+  margin: 0 auto 0 auto;
+  padding-top: 170px; }
+  #bloc_login h1 {
+    font-family: 'Jokerman';
+    font-size: 96pt;
+    text-align: center; }
+  #bloc_login fieldset {
+    border: 0; }
+  #bloc_login ol {
+    list-style: none; }
+  #bloc_login li {
+    margin-bottom: .8em; }
+  #bloc_login input {
+    width: 40%; }
+  #bloc_login #user_session_submit {
+    width: 100%; }
+  #bloc_login label {
+    display: block;
+    text-align: right;
+    width: 40%;
+    float: left;
+    padding-top: .2em;
+    margin-right: 20px; }

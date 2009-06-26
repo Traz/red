@@ -1,0 +1,26 @@
+%h1 Users
+%h3 List User
+%table.table_index
+  %thead
+    %tr 
+      %th Username 
+      %th Lastname 
+      %th Login
+      %th Email
+      %th
+  %tbody
+    - @users.each do |u| 
+      %tr{ :class => cycle('even', 'odd')}
+        %td= u.username
+        %td= u.lastname 
+        %td= u.ident
+        %td= u.email      
+        %td
+          = link_to 'show', u
+          = link_to 'edit', edit_user_path(u) 
+          = link_to 'delete', u, :confirm => 'Are you sure?', :method => :delete
+%br
+= will_paginate @users
+= link_to 'New user', new_user_path 
+
+

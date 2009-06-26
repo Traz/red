@@ -1,0 +1,31 @@
+%h1 Groups
+%h3 List Groups
+%p
+  == You are member of #{@self_member_groups.size} groups :
+  = @self_member_groups.map{|s| link_to( s.name, group_path(s)) }.join(', ')
+%p
+  == You have created #{@self_created_groups.size} :
+  - @self_created_groups.each do |s|
+    = link_to s.name, group_path(s)
+%br
+%table.table_index
+  %thead
+    %tr 
+      %th Name 
+      %th Members 
+      %th Sub-groups
+      %th Creator
+      %th
+  %tbody
+    - @groups.each do |g| 
+      %tr{ :class => cycle('even', 'odd')}
+        %td= g.name
+        %td= g.group_members.size
+        %td= g.group_subgroups.size
+        %td= g.user.full_name  
+        %td
+          = link_to 'show/edit', g
+          = link_to 'delete', g, :confirm => 'Are you sure?', :method => :delete
+%br
+= will_paginate @groups
+= link_to 'New group', new_group_path 

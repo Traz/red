@@ -1,0 +1,7 @@
+- semantic_form_for @wiki do |f| 
+  = f.error_messages
+  - f.inputs do
+    = f.input :title
+    = f.input :page, :input_html => { :class => 'mceEditor', :style => 'width:800px' }
+  - f.buttons do
+    = f.commit_button

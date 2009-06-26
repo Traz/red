@@ -1,0 +1,21 @@
+%h1 Wikis
+%h3= @wiki.title
+#wiki_page
+  =@wiki.page
+#wiki_foot 
+  Owner
+  = link_to @wiki.owner.full_name, user_path(@wiki.owner)
+  Writer
+  - User.find(@wiki.writers).each do |w|
+    = link_to w.full_name, user_path(w)
+  %br
+  Versions
+  - for v in @wiki.versions.reverse
+    = "["+ v.version.to_s + ":"
+    = link_to 'show', wiki_path(@wiki, :version_id => v.version)
+    = link_to 'revert', :action => 'revert_to_version', :version_id => v.version, :id => @wiki
+    = "]"
+%br
+= link_to 'Edit', edit_wiki_path(@wiki)
+|
+= link_to 'Back', wikis_path 

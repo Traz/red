@@ -1,0 +1,12 @@
+%h1 User
+%h3 Show User
+- ['username','lastname','email','ident','login_count','last_request_at', |
+  'last_login_at','current_login_at','last_login_ip','current_login_ip'].each do |f| |
+  %p
+    %b= f.humanize
+    = @user[f]
+%br
+= link_to 'Edit', edit_user_path 
+|
+= link_to 'Back', users_path 
+

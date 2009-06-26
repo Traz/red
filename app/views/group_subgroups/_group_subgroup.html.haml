@@ -1,0 +1,5 @@
+- gs = group_subgroup.subgroup
+%li#gp_sub_id{:id => "#{group_subgroup.id}" }
+  = link_to gs.name, group_path(gs)
+  == (have : #{gs.group_subgroups.size} sub-groups and #{gs.group_members.size} users)
+  = link_to_remote "[-]", :url => group_path(gs) , :url => group_group_subgroup_path(@group, group_subgroup), :method => :delete, :confirm => 'Are you sure ?' 

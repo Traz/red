@@ -1,0 +1,5 @@
+%ul
+  - @groups.each do |g|
+    - text = g.name
+    %li<
+      = link_to_function highlight(text,@query), "$('group_subgroup_subgroup_id').value = '#{g.id}';", :style =>"display:block;"

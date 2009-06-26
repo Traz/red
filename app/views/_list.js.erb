@@ -1,0 +1,1 @@
+<ul><% @users.each do |u| %><%- text = !@query.blank? ? highlight(u.entire_name, @query) : u.entire_name %><li><%= text%></li><% end %></ul>

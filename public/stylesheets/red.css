@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#content {
+  margin: 20px; }
+  #content h3 {
+    border-bottom: 1px solid #700E27; }
+  #content #bloc_form {
+    margin-left: 20px; }
+    #content #bloc_form input, #content #bloc_form select, #content #bloc_form textarea {
+      border: 2px solid #DBCCB6; }
+
+form.formtastic fieldset ol li {
+  display: block; }
+
+#head {
+  background-color: #700E27;
+  font-size: 0.9em;
+  margin-bottom: 10;
+  height: 34px;
+  color: white; }
+  #head #logo {
+    float: left;
+    font-family: 'Jokerman';
+    font-size: 2.2em;
+    padding: 6px 0 0 10px; }
+  #head #menu_link {
+    padding: 5px 20px 5px 0;
+    margin-left: 100px; }
+  #head #user_nav {
+    float: right;
+    padding: 5px 20px 5px 0; }
+
+#head * a {
+  font-weight: bold;
+  padding: 10px 3px 10px 3px; }
+  #head * a:link {
+    color: white;
+    text-decoration: none; }
+  #head * a:hover {
+    background-color: #A00;
+    border-bottom: 3px red solid; }
+  #head * a:visited {
+    color: white;
+    text-decoration: none; }
+
+.table_index {
+  border: 1px solid #DBCCB6;
+  border-spacing: 0;
+  padding: 0; }
+  .table_index thead {
+    background-color: #A00;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none; }
+  .table_index th, .table_index td {
+    margin: 0;
+    padding: 2px; }
+  .table_index tr.odd {
+    background-color: #EEE; }
+  .table_index tbody > tr:hover {
+    background-color: #FFD; }
+
+#wiki_foot {
+  background-color: #FEC;
+  border: 2px solid #DBCCB6;
+  margin-top: 120px;
+  padding: 12px; }
+
+.pagination {
+  padding-top: 20px; }
+  .pagination a {
+    padding: 2px;
+    border: 2px solid #DBCCB6;
+    font-weight: normal;
+    background-color: #FEC;
+    color: #000;
+    text-decoration: none; }
+    .pagination a:hover, .pagination a:active {
+      color: #FFF;
+      background-color: #A00; }
+  .pagination span.current, .pagination span.disabled {
+    padding: 2px;
+    border: 1px solid #000;
+    background-color: #FFF;
+    color: #000; }
+
+.mceContentBody {
+  font-size: 1.2em; }
+
+div.auto_complete {
+  width: 350px;
+  background: #fff; }
+  div.auto_complete ul {
+    border: 1px solid #888;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none; }
+    div.auto_complete ul li {
+      margin: 0;
+      padding: 3px; }
+      div.auto_complete ul li.selected {
+        background-color: #ffb; }
+    div.auto_complete ul a {
+      text-decoration: none; }
+      div.auto_complete ul a:hover {
+        background-color: #ffb;
+        color: black; }
+    div.auto_complete ul strong.highlight {
+      color: #800;
+      margin: 0;
+      padding: 0; }

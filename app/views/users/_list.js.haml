@@ -1,0 +1,6 @@
+%ul
+  - @users.each do |u|
+    - text = u.entire_name
+    %li<
+      = link_to_function highlight(text,@query), "$('group_member_user_id').value = '#{u.id}';", :style =>"display:block;"
+

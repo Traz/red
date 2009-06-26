@@ -1,0 +1,41 @@
+%h1 Groups
+%h3 Show Group
+%p
+  %b Name :
+  = in_place_editor_field :group, 'name'
+%p
+  %b Created by 
+  = @group.user.full_name
+  at
+  = @group.created_at.to_s :short
+%br{:style => 'clear:both;'}
+#group_user_member{:style => 'float: left;width:450px;'}
+  %h3 Users member list
+  - remote_form_for [@group, GroupMember.new] do |f|
+    Add user :
+    = text_field_with_auto_complete :user, :auto, {:size => 25, :autocomplete => 'off'},       |
+         {:skip_style => true,  :frequency => 0.25,                                             |
+          :url => list_users_path, :method => :get, :with => "'user_query=' + element.value"}   |
+    = f.hidden_field  :user_id
+    = f.hidden_field  :group_id, :value => @group.id
+    = f.submit
+  %ol#wp_user_list
+    = render @list_group_members
+  = will_paginate @list_group_members, :param_name => :members_page
+
+#group_group_member{:style => 'margin-left:500px;width: 450px;'}
+  %h3 Groups member list
+  - remote_form_for [@group, GroupSubgroup.new] do |f|
+    Add subgroup :
+    = text_field_with_auto_complete :group, :auto, {:size => 25, :autocomplete => 'off'},       |
+         {:skip_style => true,  :frequency => 0.25,                                              |
+          :url => list_groups_path, :method => :get, :with => "'group_query=' + element.value"}  |
+    = f.hidden_field :subgroup_id
+    = f.hidden_field :group_id, :value => @group.id
+    = f.submit
+  %ol#wp_sub_list
+    = render @list_group_subgroups
+  = will_paginate @list_group_subgroups, :param_name => :subgroups_page
+%br{:style => 'clear:both;'}
+
+= link_to 'Back', groups_path 

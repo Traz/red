@@ -1,0 +1,9 @@
+#bloc_login
+  %h1 Red
+  - semantic_form_for @user_session, :url => user_session_path  do |f| 
+    - f.inputs do
+      = f.input :ident, :label => 'Login'
+      = f.input :password
+      = f.input :remember_me, :required => false, :as => :boolean
+    - f.buttons do
+      = f.commit_button "  Login  "

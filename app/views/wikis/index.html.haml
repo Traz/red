@@ -1,0 +1,25 @@
+%h1 Wikis
+%h3 List Wikis
+#wp_wiki_list
+  %table.table_index
+    %thead
+      %tr
+        %th Title
+        %th Owner
+        %th Writer
+        %th Version
+        %th 
+    %tbody   
+      - @wikis.each do |w|
+        %tr{ :class => cycle('even', 'odd')}
+          %td= w.title
+          %td= w.owner.full_name
+          %td= w.writer.full_name
+          %td= w.version
+          %td
+            = link_to 'Show', w
+            = link_to 'Edit', edit_wiki_path(w)
+            = link_to 'Destroy', w, :confirm => 'Are you sure?', :method => :delete
+  = will_paginate @wikis
+%br
+= link_to 'New wiki', new_wiki_path
