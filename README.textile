@@ -1,0 +1,26 @@
+h2. Red : small Rails application for exploring purpose ...
+
+This is the Git repository of the french tutorial blog "Rubiki":http://rubyki.blogspot.com. Each Github tag corresponding on one or more posts. Warning : i'm learning Rails in same time so ... there surely numerous mistakes :) Drop me a message if you find someone or if you have a better solution for a script.
+
+h2. History log and subject themes
+
+h3. july 2009 - 0.1
+
+__**Libraries**__ installed and configured :
+** Haml / Sass
+** Authlogic
+** Acts_as_versionned
+** Acts_as_textiled
+** TinyMCE
+** In_place_editing
+** Auto_complete
+** Formtastic
+** Will_paginate
+
+__**Tips** used :
+** Multiple will_paginate on same page
+** Auto_complete RESTfull way in nested form, with returning an id rather a string
+** Ajax add/remove examples 
+** Manage users, groups (having users or subgroups) for future role management
+** Authentification system with authlogic
+ 
