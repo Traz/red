@@ -13,7 +13,7 @@
   %h3 Users member list
   - remote_form_for [@group, GroupMember.new] do |f|
     Add user :
-    = text_field_with_auto_complete :user, :auto, {:size => 25, :autocomplete => 'off'},       |
+    = text_field_with_auto_complete :user, :auto, {:size => 25, :autocomplete => 'off'},        |
          {:skip_style => true,  :frequency => 0.25,                                             |
           :url => list_users_path, :method => :get, :with => "'user_query=' + element.value"}   |
     = f.hidden_field  :user_id

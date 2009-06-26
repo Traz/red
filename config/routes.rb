@@ -1,11 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
-
-
-
   map.resources :wikis
   map.resources :users, :collection => { :list => :get } 
-  
   map.resources :groups, :has_many => [:group_members, :group_subgroups], :collection => { :list => :get }
   
   map.resource  :user_session
